@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    Tile currentTile;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,12 @@ public class Unit : MonoBehaviour
         
     }
 
-    public void Move()
+    public void Move(Tile t)
     {
+        if (currentTile)
+            currentTile.RemoveUnit();
 
+        currentTile = t;
+        t.SetUnit(this);
     }
 }
