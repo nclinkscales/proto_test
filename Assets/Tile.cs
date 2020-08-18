@@ -25,7 +25,7 @@ public class Tile : MonoBehaviour
         occupyingUnit = u;
     }
 
-    public void RemoveUnit(Unit u)
+    public void RemoveUnit()
     {
         occupyingUnit = null;
     }
